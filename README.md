@@ -1,6 +1,6 @@
 # Catlock
 
-![Catlock](catlock.png)
+<img src="catlock.png" alt="Catlock" width="200">
 
 A macOS menu bar utility that blocks all keyboard and mouse input—perfect for when your cat decides to take a nap on your keyboard.
 
