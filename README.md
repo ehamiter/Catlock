@@ -1,8 +1,12 @@
 # Catlock
 
-<img src="catlock.png" alt="Catlock" width="200">
+![Catlock](catlock.png)
 
 A macOS menu bar utility that blocks all keyboard and mouse input—perfect for when your cat decides to take a nap on your keyboard.
+
+## Download
+
+**[Download Catlock v1.0.0](https://github.com/ehamiter/Catlock/releases/tag/v1.0.0)**
 
 ## Features
 
@@ -13,11 +17,14 @@ A macOS menu bar utility that blocks all keyboard and mouse input—perfect for 
 - **Auto-timeout**: Automatically unlocks after 10 minutes (safety feature)
 - **Failsafe**: Always starts unlocked, even after crashes
 
-## Building
+## Installation
 
-1. Open `Catlock/Catlock.xcodeproj` in Xcode
-2. Select your development team in Signing & Capabilities
-3. Build and run (⌘R)
+1. Download and unzip `Catlock.zip` from the [latest release](https://github.com/ehamiter/Catlock/releases/tag/v1.0.0)
+2. Move `Catlock.app` to Applications
+3. Launch and grant **Accessibility** permission when prompted
+4. Restart the app after granting permission
+
+> **Note**: The app is signed and notarized by Apple, so it should open without any Gatekeeper warnings.
 
 ## Permissions
 
@@ -33,16 +40,15 @@ On first launch:
 
 ## Usage
 
-### Toggle Catlock
-- **Hotkey**: `Escape` + `Delete`
-  - Hold Escape, then press Delete
-  - Keycodes: 53 + 51
-- **Menu bar**: Click the cat icon → "Enable/Disable Catlock"
+### Hotkeys
 
-### Emergency Unlock
-- **Failsafe hotkey**: `Fn` + `Escape`
-  - **Always** unlocks, guaranteed
-  - Use this if you ever get stuck
+| Action | Hotkey |
+|--------|--------|
+| Toggle lock | `Escape` + `Delete` |
+| **Emergency unlock** | `Fn` + `Escape` (always works) |
+
+### Menu Bar
+Click the cat icon in the menu bar to enable/disable Catlock.
 
 ### Visual Indicators (SF Symbols)
 - Cat outline = Unlocked (normal operation)
@@ -59,6 +65,17 @@ On first launch:
 
 **Tip**: If anything goes wrong, `Fn` + `Escape` will always unlock.
 
+## Requirements
+
+- macOS 13 Ventura or later
+- Accessibility permission
+
+## Building from Source
+
+1. Open `Catlock/Catlock.xcodeproj` in Xcode
+2. Select your development team in Signing & Capabilities
+3. Build and run (⌘R)
+
 ## Technical Details
 
 ### Event Types Blocked
@@ -73,6 +90,7 @@ On first launch:
 - `main.swift`: App entry point with MainActor isolation
 
 ### Security Notes
+- Signed and notarized by Apple
 - App Sandbox is **disabled** (required for CGEventTap)
 - Hardened Runtime is enabled
 - No private APIs used
