@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Menu bar–only app: no dock icon -->
+	<key>LSUIElement</key>
+	<true/>
+	
+	<!-- App name -->
+	<key>CFBundleName</key>
+	<string>Catlock</string>
+	
+	<!-- App icon -->
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	
+
+	
+	<!-- Usage description for Accessibility permission prompt -->
+	<key>NSAccessibilityUsageDescription</key>
+	<string>Catlock needs Accessibility permission to block keyboard and mouse input when enabled. This allows your cat to walk on your keyboard without causing chaos.</string>
+</dict>
+</plist>
